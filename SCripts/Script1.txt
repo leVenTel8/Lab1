@@ -1,0 +1,28 @@
+--Создание таблицы подразделений предприятия
+
+CREATE TABLE Department (
+	ID INTEGER PRIMARY KEY,
+	Name VARCHAR(50),
+	Room VARCHAR(12));
+COMMIT;
+
+--Создание таблицы сотрудников предприятия
+
+CREATE TABLE Personal (
+	Num	INTEGER PRIMARY KEY,
+	LName	VARCHAR(35),
+	FName 	VARCHAR(35),
+	Sname	VARCHAR(35),
+	BDay	DATE,
+	Post	VARCHAR(50),
+	Adres	VARCHAR(200),
+	Phone 	VARCHAR(12),
+	Pay	DECIMAL(18,4),
+	Dep_code INTEGER);
+COMMIT;
+
+--Создание ограничений целостности для внешних ключей
+
+ALTER TABLE Personal ADD CONSTRAINT FK_DEP FOREIGN KEY (Dep_code)
+REFERENCES Department (ID);
+COMMIT;

@@ -1,0 +1,19 @@
+--добавление данных в таблицу подразделений
+INSERT INTO DEPARTMENT (ID, name, room) VALUES (1, 'Бухгалтерия', '12');
+INSERT INTO DEPARTMENT (ID, name, room) VALUES (2, 'Плановый', '17');
+INSERT INTO DEPARTMENT (ID, name, room) VALUES (3, 'Юридический', '5');
+COMMIT;
+
+--добавление данных в таблицу сотрудников
+INSERT INTO PERSONAL (num, lname, fname, sname, bday, post, adres, phone, pay, dep_code)
+VALUES
+(1, 'Ivanov', 'Petr', 'Nicolaevich', '12.06.1985', 'Nach. Otdela', 'ul. Novotorskaya, d.3, kv. 12', '52-66-44', 45000, 2);
+
+INSERT INTO PERSONAL (num, lname, fname, sname, bday, post, adres, phone, pay, dep_code)
+VALUES
+(2, 'Сидоров', 'Evgen', 'Borisovich', '02.11.1991', 'Byhgalter', 'pr.Pobedi, d.11, kv. 50', '34-12-44', 35000, 1);
+
+INSERT INTO PERSONAL (num, lname, fname, sname, bday, post, adres, phone, pay, dep_code)
+VALUES
+(3, 'Сидоров', 'Evgen', 'Borisovich', '02.11.1991', 'Byhgalter', 'pr.Pobedi, d.11, kv. 50', '34-12-44', 20000, 1);
+COMMIT;
